@@ -64,7 +64,7 @@ btnLogin.addEventListener("click", async () => {
       localStorage.removeItem("remember_login");
     }
 
-    window.location.href = "home.html";
+    window.location.href = "index.html";
   } catch (e) {
     console.error(e);
     msg.textContent = "Falha ao conectar no servidor.";
@@ -73,4 +73,5 @@ btnLogin.addEventListener("click", async () => {
     btnLogin.textContent = "Entrar";
   }
 });
+
 
