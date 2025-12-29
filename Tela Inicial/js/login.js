@@ -73,3 +73,4 @@ btnLogin.addEventListener("click", async () => {
     btnLogin.textContent = "Entrar";
   }
 });
+
