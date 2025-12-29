@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Acesso</h1>
+
+    <label>CPF</label>
+    <input id="cpf" inputmode="numeric" placeholder="Somente números" />
+
+    <label>Data de nascimento</label>
+    <input id="nasc" inputmode="numeric" placeholder="DDMMAAAA" />
+
+    <label class="row">
+      <input type="checkbox" id="remember" />
+      Salvar dados neste dispositivo
+    </label>
+
+    <button id="btnLogin">Entrar</button>
+
+    <p id="msg" class="msg"></p>
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
