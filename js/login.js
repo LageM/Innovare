@@ -44,12 +44,13 @@ btnLogin.addEventListener("click", async () => {
   try {
     const url = `${WEBHOOK_LOGIN}?cpf=${encodeURIComponent(cpf)}&data_nascimento=${encodeURIComponent(nasc)}`;
     const res = await fetch(url);
-    const data = await res.json();
+    const result = await res.json();
+const data = Array.isArray(result) ? result[0] : result;
 
-    if (!data.success) {
-      msg.textContent = data.message || "Acesso negado.";
-      return;
-    }
+if (!data.success) {
+  msg.textContent = data.message || "Acesso negado.";
+  return;
+}
 
     // Salva sessão
     localStorage.setItem("usuario", JSON.stringify({
@@ -73,3 +74,4 @@ btnLogin.addEventListener("click", async () => {
     btnLogin.textContent = "Entrar";
   }
 });
+
